@@ -1,4 +1,277 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP32-S2-WROVER U?
+U 1 1 606D12ED
+P 6600 3050
+F 0 "U?" H 6750 4350 50  0000 C CNN
+F 1 "ESP32-S2-WROVER" H 7050 4250 50  0000 C CNN
+F 2 "RF_Module:ESP32-S2-WROVER" H 7350 1900 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-s2-wroom_esp32-s2-wroom-i_datasheet_en.pdf" H 6300 2250 50  0001 C CNN
+	1    6600 3050
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2450 1650 1450 650 
+U 606D7E2A
+F0 "UBS-Uart" 50
+F1 "CP2104_UART-USB_micro_B.sch" 50
+F2 "DTR" O R 3900 2050 50 
+F3 "USB_TX" O R 3900 1700 50 
+F4 "USB_RX" O R 3900 1800 50 
+F5 "RTS" O R 3900 2150 50 
+$EndSheet
+$Sheet
+S 4400 1950 1200 400 
+U 6070184A
+F0 "ESP32_USB_auto_reset" 50
+F1 "ESP32_USB_auto_reset.sch" 50
+F2 "DTR" I L 4400 2050 50 
+F3 "RTS" I L 4400 2150 50 
+F4 "GPIO0" O R 5600 2150 50 
+F5 "CHIP_PU" O R 5600 2050 50 
+$EndSheet
+Wire Wire Line
+	3900 2050 4400 2050
+Wire Wire Line
+	3900 2150 4400 2150
+Wire Wire Line
+	5600 2050 6000 2050
+Wire Wire Line
+	5600 2150 6000 2150
+$Comp
+L Device:C C?
+U 1 1 60714FC9
+P 6250 1500
+F 0 "C?" H 6365 1546 50  0000 L CNN
+F 1 "10uF" H 6365 1455 50  0000 L CNN
+F 2 "" H 6288 1350 50  0001 C CNN
+F 3 "~" H 6250 1500 50  0001 C CNN
+	1    6250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6071598E
+P 6250 1700
+F 0 "#PWR?" H 6250 1450 50  0001 C CNN
+F 1 "GND" H 6255 1527 50  0000 C CNN
+F 2 "" H 6250 1700 50  0001 C CNN
+F 3 "" H 6250 1700 50  0001 C CNN
+	1    6250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6071601E
+P 5800 1500
+F 0 "C?" H 5915 1546 50  0000 L CNN
+F 1 "0.1uF" H 5915 1455 50  0000 L CNN
+F 2 "" H 5838 1350 50  0001 C CNN
+F 3 "~" H 5800 1500 50  0001 C CNN
+	1    5800 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1650 5800 1700
+Wire Wire Line
+	5800 1700 6250 1700
+Wire Wire Line
+	6250 1650 6250 1700
+Connection ~ 6250 1700
+Wire Wire Line
+	5800 1350 6250 1350
+Wire Wire Line
+	6600 1350 6600 1850
+Connection ~ 6250 1350
+Wire Wire Line
+	6250 1350 6600 1350
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60718697
+P 6600 1350
+F 0 "#PWR?" H 6600 1200 50  0001 C CNN
+F 1 "+3V3" H 6615 1523 50  0000 C CNN
+F 2 "" H 6600 1350 50  0001 C CNN
+F 3 "" H 6600 1350 50  0001 C CNN
+	1    6600 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 1350
+$Comp
+L Connector:Barrel_Jack_Switch J?
+U 1 1 6071F731
+P 2850 4050
+F 0 "J?" H 2907 4367 50  0000 C CNN
+F 1 "Barrel_Jack_Switch" H 2907 4276 50  0000 C CNN
+F 2 "" H 2900 4010 50  0001 C CNN
+F 3 "~" H 2900 4010 50  0001 C CNN
+	1    2850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 607206E4
+P 3400 3950
+F 0 "#PWR?" H 3400 3800 50  0001 C CNN
+F 1 "VCC" H 3415 4123 50  0000 C CNN
+F 2 "" H 3400 3950 50  0001 C CNN
+F 3 "" H 3400 3950 50  0001 C CNN
+	1    3400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117-3.3 U?
+U 1 1 60721611
+P 4400 3950
+F 0 "U?" H 4400 4192 50  0000 C CNN
+F 1 "AMS1117-3.3" H 4400 4101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4400 4150 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 4500 3700 50  0001 C CNN
+	1    4400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 60722DBF
+P 3650 3950
+F 0 "FB?" V 3505 3950 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 3504 3950 50  0001 C CNN
+F 2 "" V 3580 3950 50  0001 C CNN
+F 3 "~" H 3650 3950 50  0001 C CNN
+	1    3650 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 60724A51
+P 4850 3950
+F 0 "FB?" V 4705 3950 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 4704 3950 50  0001 C CNN
+F 2 "" V 4780 3950 50  0001 C CNN
+F 3 "~" H 4850 3950 50  0001 C CNN
+	1    4850 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60725318
+P 3850 4100
+F 0 "C?" H 3965 4146 50  0000 L CNN
+F 1 "10uF" H 3965 4055 50  0000 L CNN
+F 2 "" H 3888 3950 50  0001 C CNN
+F 3 "~" H 3850 4100 50  0001 C CNN
+	1    3850 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60726DC7
+P 5050 4100
+F 0 "C?" H 5165 4146 50  0000 L CNN
+F 1 "33uF" H 5165 4055 50  0000 L CNN
+F 2 "" H 5088 3950 50  0001 C CNN
+F 3 "~" H 5050 4100 50  0001 C CNN
+	1    5050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6072744C
+P 3250 4150
+F 0 "#PWR?" H 3250 3900 50  0001 C CNN
+F 1 "GND" H 3255 3977 50  0000 C CNN
+F 2 "" H 3250 4150 50  0001 C CNN
+F 3 "" H 3250 4150 50  0001 C CNN
+	1    3250 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60727C6A
+P 4400 4300
+F 0 "#PWR?" H 4400 4050 50  0001 C CNN
+F 1 "GND" H 4405 4127 50  0000 C CNN
+F 2 "" H 4400 4300 50  0001 C CNN
+F 3 "" H 4400 4300 50  0001 C CNN
+	1    4400 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4250 3850 4300
+Wire Wire Line
+	3850 4300 4400 4300
+Wire Wire Line
+	5050 4300 5050 4250
+Connection ~ 4400 4300
+Wire Wire Line
+	4400 4300 5050 4300
+Wire Wire Line
+	4400 4250 4400 4300
+Wire Wire Line
+	3750 3950 3850 3950
+Connection ~ 3850 3950
+Wire Wire Line
+	3850 3950 4100 3950
+Wire Wire Line
+	4700 3950 4750 3950
+Wire Wire Line
+	4950 3950 5050 3950
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60729204
+P 5050 3950
+F 0 "#PWR?" H 5050 3800 50  0001 C CNN
+F 1 "+3V3" H 5065 4123 50  0000 C CNN
+F 2 "" H 5050 3950 50  0001 C CNN
+F 3 "" H 5050 3950 50  0001 C CNN
+	1    5050 3950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 3950
+Wire Wire Line
+	3150 3950 3400 3950
+Connection ~ 3400 3950
+Wire Wire Line
+	3400 3950 3550 3950
+$Comp
+L power:GND #PWR?
+U 1 1 6072A3A6
+P 6600 4150
+F 0 "#PWR?" H 6600 3900 50  0001 C CNN
+F 1 "GND" H 6605 3977 50  0000 C CNN
+F 2 "" H 6600 4150 50  0001 C CNN
+F 3 "" H 6600 4150 50  0001 C CNN
+	1    6600 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 1800 2    50   Input ~ 0
+ESP32_TX
+Text GLabel 4050 1700 2    50   Input ~ 0
+ESP32_RX
+Wire Wire Line
+	3900 1700 4050 1700
+Wire Wire Line
+	4050 1800 3900 1800
+Text GLabel 7300 2350 2    50   Input ~ 0
+ESP32_TX
+Text GLabel 7300 2250 2    50   Input ~ 0
+ESP32_RX
+Wire Wire Line
+	7200 2250 7300 2250
+Wire Wire Line
+	7200 2350 7300 2350
 $EndSCHEMATC
