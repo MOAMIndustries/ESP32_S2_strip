@@ -117,7 +117,7 @@ U 1 1 6071F731
 P 2850 4050
 F 0 "J?" H 2907 4367 50  0000 C CNN
 F 1 "Barrel_Jack_Switch" H 2907 4276 50  0000 C CNN
-F 2 "" H 2900 4010 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal" H 2900 4010 50  0001 C CNN
 F 3 "~" H 2900 4010 50  0001 C CNN
 	1    2850 4050
 	1    0    0    -1  
@@ -274,4 +274,208 @@ Wire Wire Line
 	7200 2250 7300 2250
 Wire Wire Line
 	7200 2350 7300 2350
+Text GLabel 5550 2550 0    50   Input ~ 0
+ADC0
+Text GLabel 5550 2650 0    50   Input ~ 0
+ADC1
+Wire Wire Line
+	5550 2550 5700 2550
+Wire Wire Line
+	5700 2550 5700 2250
+Wire Wire Line
+	5700 2250 6000 2250
+Wire Wire Line
+	5550 2650 5750 2650
+Wire Wire Line
+	5750 2650 5750 2350
+Wire Wire Line
+	5750 2350 6000 2350
+Text GLabel 5850 3950 0    50   Input ~ 0
+WS281x
+$Comp
+L Connector:Conn_01x03_Male ADC_0
+U 1 1 6072E9E1
+P 3700 5850
+F 0 "ADC_0" H 3672 5874 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 3672 5783 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 3700 5850 50  0001 C CNN
+F 3 "~" H 3700 5850 50  0001 C CNN
+	1    3700 5850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male ADC_1
+U 1 1 6072FA8F
+P 3700 6550
+F 0 "ADC_1" H 3672 6574 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 3672 6483 50  0000 R CNN
+F 2 "" H 3700 6550 50  0001 C CNN
+F 3 "~" H 3700 6550 50  0001 C CNN
+	1    3700 6550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male 3_PIN
+U 1 1 60730473
+P 6000 5550
+F 0 "3_PIN" H 5972 5574 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 5972 5483 50  0000 R CNN
+F 2 "" H 6000 5550 50  0001 C CNN
+F 3 "~" H 6000 5550 50  0001 C CNN
+	1    6000 5550
+	-1   0    0    -1  
+$EndComp
+Text GLabel 7500 3050 2    50   Input ~ 0
+CLK
+Text GLabel 7500 3150 2    50   Input ~ 0
+DATA
+Text GLabel 5700 5550 0    50   Input ~ 0
+WS281x
+Text GLabel 3450 5850 0    50   Input ~ 0
+ADC0
+Text GLabel 3450 6550 0    50   Input ~ 0
+ADC1
+$Comp
+L power:+3V3 #PWR?
+U 1 1 607314B3
+P 3450 5750
+F 0 "#PWR?" H 3450 5600 50  0001 C CNN
+F 1 "+3V3" H 3465 5923 50  0000 C CNN
+F 2 "" H 3450 5750 50  0001 C CNN
+F 3 "" H 3450 5750 50  0001 C CNN
+	1    3450 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 607320E2
+P 3450 6450
+F 0 "#PWR?" H 3450 6300 50  0001 C CNN
+F 1 "+3V3" H 3465 6623 50  0000 C CNN
+F 2 "" H 3450 6450 50  0001 C CNN
+F 3 "" H 3450 6450 50  0001 C CNN
+	1    3450 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60733531
+P 3450 5950
+F 0 "#PWR?" H 3450 5700 50  0001 C CNN
+F 1 "GND" H 3455 5777 50  0000 C CNN
+F 2 "" H 3450 5950 50  0001 C CNN
+F 3 "" H 3450 5950 50  0001 C CNN
+	1    3450 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60733CB6
+P 3450 6650
+F 0 "#PWR?" H 3450 6400 50  0001 C CNN
+F 1 "GND" H 3455 6477 50  0000 C CNN
+F 2 "" H 3450 6650 50  0001 C CNN
+F 3 "" H 3450 6650 50  0001 C CNN
+	1    3450 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 6450 3500 6450
+Wire Wire Line
+	3500 6550 3450 6550
+Wire Wire Line
+	3450 6650 3500 6650
+Wire Wire Line
+	3500 5950 3450 5950
+Wire Wire Line
+	3450 5850 3500 5850
+Wire Wire Line
+	3500 5750 3450 5750
+Wire Wire Line
+	5700 5550 5800 5550
+$Comp
+L Connector:Conn_01x04_Male 4_PIN
+U 1 1 6073861C
+P 6000 6250
+F 0 "4_PIN" H 5972 6224 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 5972 6133 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 6000 6250 50  0001 C CNN
+F 3 "~" H 6000 6250 50  0001 C CNN
+	1    6000 6250
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5650 6250 0    50   Input ~ 0
+CLK
+Text GLabel 5650 6350 0    50   Input ~ 0
+DATA
+$Comp
+L power:GND #PWR?
+U 1 1 6073AA8B
+P 5750 5650
+F 0 "#PWR?" H 5750 5400 50  0001 C CNN
+F 1 "GND" H 5755 5477 50  0000 C CNN
+F 2 "" H 5750 5650 50  0001 C CNN
+F 3 "" H 5750 5650 50  0001 C CNN
+	1    5750 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6073B16D
+P 5750 6450
+F 0 "#PWR?" H 5750 6200 50  0001 C CNN
+F 1 "GND" H 5755 6277 50  0000 C CNN
+F 2 "" H 5750 6450 50  0001 C CNN
+F 3 "" H 5750 6450 50  0001 C CNN
+	1    5750 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 6073B839
+P 5750 6150
+F 0 "#PWR?" H 5750 6000 50  0001 C CNN
+F 1 "VCC" H 5765 6323 50  0000 C CNN
+F 2 "" H 5750 6150 50  0001 C CNN
+F 3 "" H 5750 6150 50  0001 C CNN
+	1    5750 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 6350 5800 6350
+Wire Wire Line
+	5800 6450 5750 6450
+Wire Wire Line
+	5650 6250 5800 6250
+Wire Wire Line
+	5800 6150 5750 6150
+Wire Wire Line
+	5750 5650 5800 5650
+$Comp
+L power:VCC #PWR?
+U 1 1 607402A5
+P 5750 5450
+F 0 "#PWR?" H 5750 5300 50  0001 C CNN
+F 1 "VCC" H 5765 5623 50  0000 C CNN
+F 2 "" H 5750 5450 50  0001 C CNN
+F 3 "" H 5750 5450 50  0001 C CNN
+	1    5750 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5450 5800 5450
+Wire Wire Line
+	5850 3950 6000 3950
+Wire Wire Line
+	7200 3050 7500 3050
+Wire Wire Line
+	7500 3150 7200 3150
+Text GLabel 5800 3050 0    50   Input ~ 0
+I2C_CLK
+Text GLabel 5800 3150 0    50   Input ~ 0
+I2C_DATA
+Wire Wire Line
+	5800 3050 6000 3050
+Wire Wire Line
+	6000 3150 5800 3150
 $EndSCHEMATC
