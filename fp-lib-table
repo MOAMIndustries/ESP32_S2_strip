@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Andrew_van_dam_logo)(type KiCad)(uri ${KIPRJMOD}/Andrew_van_dam_logo.pretty)(options "")(descr ""))
+)

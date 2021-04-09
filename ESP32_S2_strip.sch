@@ -703,4 +703,15 @@ F 3 "" H 3350 7150 50  0001 C CNN
 	1    3350 7150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Andrew_van_dam_logo:LOGO #G1
+U 1 1 606FC633
+P 9400 6000
+F 0 "#G1" H 9400 5801 60  0001 C CNN
+F 1 "LOGO" H 9400 6199 60  0001 C CNN
+F 2 "Andrew_van_dam_logo:Andrew_van_dam_logo_12mm" H 9400 6000 50  0001 C CNN
+F 3 "" H 9400 6000 50  0001 C CNN
+	1    9400 6000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
